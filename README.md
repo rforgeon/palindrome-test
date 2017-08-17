@@ -17,17 +17,17 @@
 
 Enter a word or sentence to determine if it is a palindrome.
 
+`http://localhost:3000/palindromes/test`
+
+data:
 ```
-curl -X POST -H "Content-Type: application/json" 
-			 -d '{
-			 		"body": "Is it I? It is I!"
-			 	  }' "http://localhost:3000/palindromes/test"
-```
+{
+  "body": "Is it I? It is I!"
+}
+```			 	  
 
 #### Get
 
 Recieve the last 10 palindromes entered.
 
-```
-curl -X GET -H "Content-Type: application/json" "http://localhost:3000/palindromes/recent"
-```
+`http://localhost:3000/palindromes/recent`
