@@ -2,11 +2,13 @@
 
 ## Instructions
 
-### Install
+### Install & Run
 
-`cd palindrome-api`
+`cd palindrome-test`
 
 `bundle install`
+
+`rails db:migrate`
 
 `rails s`
 
