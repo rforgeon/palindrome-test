@@ -35,8 +35,8 @@ class PalindromesController < ApplicationController
   end
 
   def recent
-    #select the last 10 records
-    @palindromes = Palindrome.last(10).reverse
+    #select the last 10 records created within the last 10 minutes
+    @palindromes = Palindrome.where(updated_at: (Time.now - 10.minutes)..Time.now).limit(10).reverse
     json_response(@palindromes)
   end  
 
